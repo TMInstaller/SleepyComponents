@@ -1,0 +1,92 @@
+// /src/styles/Header.module.css
+
+.header {
+  height: 200px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  margin-top: 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 100px;
+  margin-bottom: 50px;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: #eee;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .logo {
+    margin-right: 20px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav li {
+    margin: 10px 0;
+  }
+
+  .nav a:hover {
+    background-color: #eee;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
+}
